@@ -1,0 +1,16 @@
+<section class="products-section">
+    <h2>Nuestros productos</h2>
+    <div class="products-grid">
+        {{#each products}}
+        <div class="product-card">
+            <img src="{{this.imageUrl}}" alt="{{this.name}}" class="product-image"> <!-- Asegúrate de que el src esté correcto -->
+            <div class="product-info">
+                <h3>{{this.name}}</h3>
+                <p>{{this.description}}</p>
+                <p><strong>Precio:</strong> ${{this.price}}</p> <!-- Verifica que {{this.price}} esté bien -->
+                <a href="/products/{{this._id}}" class="btn">Ver detalles</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
